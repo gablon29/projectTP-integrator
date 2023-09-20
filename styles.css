@@ -13,6 +13,24 @@ body {
   padding: 50px 30px;
   text-align: center;
 }
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: linear-gradient(to left, rgb(212, 0, 255), #7c109a);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: linear-gradient(to left, rgb(212, 0, 255), #7c109a);
+}
 
 .hero h1 {
   font-weight: normal;
