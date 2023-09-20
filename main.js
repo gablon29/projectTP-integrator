@@ -39,3 +39,37 @@ pets.forEach((pet) => {
 });
 
 document.querySelector(".animal").appendChild(wrapper);
+
+const filterButton = document.querySelectorAll(".filter-nav a");
+filterButton.forEach((el) => {
+  el.addEventListener("click", (e) => handleFilterClick(e));
+});
+
+function handleFilterClick(e) {
+  let target = e.target;
+  e.preventDefault();
+
+  filterButton.forEach((el) => {
+    el.classList.remove("active");
+  });
+  target.classList.add("active");
+
+  filterPets(target.dataset.filter);
+}
+
+function filterPets(species) {
+  const allPets = document.querySelectorAll(".animal-card");
+  if (species == "all") {
+    allPets.forEach((el) => {
+      el.style.display = "";
+    });
+  } else {
+    allPets.forEach((el) => {
+      if (el.querySelector(".species").textContent == species) {
+        el.style.display = "";
+      } else {
+        el.style.display = "none";
+      }
+    });
+  }
+}

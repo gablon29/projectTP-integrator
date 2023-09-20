@@ -58,13 +58,28 @@ body {
   margin: 4px;
   border-radius: 4px;
 }
+
+.filter-nav a:hover {
+  background-color: #e985bc;
+}
+
+.filter-nav .active {
+  background-color: #702acb;
+  color: white;
+}
+
+.filter-nav .active:hover {
+  background-color: #702acb;
+  cursor: default;
+}
+
 .animal {
   max-width: 700px;
   margin: 0 auto;
 }
 .animal-card {
   display: grid;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   grid-template-columns: 200px 1fr;
   background-color: white;
   border-radius: 20px;
