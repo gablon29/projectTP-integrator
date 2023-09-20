@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pet Adoption List</title>
     <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="main.js"></script>
   </head>
   <body>
     <div class="hero">
@@ -17,7 +18,8 @@
       <a href="#">Cats</a>
       <a href="#">Rabbits</a>
     </div>
-    <div class="animal">
+    <div class="animal"></div>
+    <template id="animal-card">
       <div class="animal-card">
         <div class="animal-card-text">
           <h3>Name</h3>
@@ -38,6 +40,6 @@
           />
         </div>
       </div>
-    </div>
+    </template>
   </body>
 </html>
